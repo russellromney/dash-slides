@@ -21,7 +21,7 @@ This is a Dash app with built in slide navigation, logo, web title, etc. An exam
 
 Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd like. 
 
-![example gif](https://gfycat.com/WelloffAmbitiousChrysalis.gif)
+![gif](https://media.giphy.com/media/YPt6omcsn3Q5iabl9V/giphy.gif)
 
 ## More custom stuff
 
