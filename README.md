@@ -1,8 +1,8 @@
-![logo](https://raw.githubusercontent.com/russellromney/dash-slides/master/dash-slides/assets/logo.png)
-
 # dash-slides
 
 Make truly interactive slides in Python with Plotly Dash.
+
+![logo](https://raw.githubusercontent.com/russellromney/dash-slides/master/dash-slides/assets/logo.png)
 
 ---
 
