@@ -2,7 +2,7 @@
 
 Make truly interactive slides in Python with Plotly Dash.
 
-![logo](https://raw.githubusercontent.com/russellromney/dash-slides/master/dash-slides/assets/logo.png)
+![logo](https://raw.githubusercontent.com/russellromney/dash-slides/master/assets/logo.png)
 
 ---
 
