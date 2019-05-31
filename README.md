@@ -18,6 +18,7 @@ This is a Dash app with built in slide navigation, logo, web title, etc. An exam
 3. In `presentation.py`:
    - List your slides' names in order (without the `.py`) in `slide_order`
 2. Store custom functions, utilities, objects, etc. in `custom_utilities/` or however else.
+4. `pip install dash-bootstrap components`
 
 Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd like. 
 
@@ -39,3 +40,5 @@ Then run it like a normal Dash app with `python index.py` or using Gunicorn or w
 ---
 
 Made with :heart: by Russell Romney in Madison, WI.
+
+> Shoutout to dash_bootstrap_components, which is used to make navigation pretty
