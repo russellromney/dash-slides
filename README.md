@@ -6,23 +6,25 @@ Make truly interactive slides in Python with Plotly Dash.
 
 ---
 
-This is a Dash app with built in slide navigation, logo, web title, etc. An example is in `example/` 
+This is a Dash app with built in slide navigation, logo, web title, etc. An example is in `example/`.
 
 ## To use:
 
 1. Download, clone, or fork `dash-slides/`.
 1. Put slides (individual Dash apps) in `slides/` as `<slide_name>.py` files with callbacks and content.
-   - Slide names must be valid Python variable names.
-   - The index function expects the slide's content to be named like `content = html.Div...` (similar to multipage Dash app where each page has a `layout = html.Div...`
+   - Slide names must be valid Python variable names e.g. `example.py` or `_intro5.py`.
+   - Each slide's content is named `content = html.Div...` (similar to multipage Dash app where each page has a `layout = html.Div...`
    - Do not remove `from app import app` from any slide.
 3. In `presentation.py`:
    - List your slides' names in order (without the `.py`) in `slide_order`
+   - e.g. ['intro','template','last_slide','end']
 2. Store custom functions, utilities, objects, etc. in `custom_utilities/` or however else.
 4. `pip install dash-bootstrap-components`
+   - the navigation depends on it
 
 Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd like. 
 
-![gif](https://media.giphy.com/media/YPt6omcsn3Q5iabl9V/giphy.gif)
+![example pic](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_pic.png)
 
 ---
 
