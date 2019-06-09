@@ -9,7 +9,7 @@ slide_order = [
     'template',
 ]
 
-# the thing that appears at the top
+# the text that appears in the tab
 presentation_title = 'Dash Slides'
 
 # the text that appears in the previous and next buttons

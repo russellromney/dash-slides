@@ -58,10 +58,12 @@ app.layout = html.Div([
         # nav div
         dbc.Row(style=dict(height='auto',position='sticky',margin='10px'),children=[
             # logo
-            dbc.Col(width=1,style=nav_style,children=get_logo()),
+            dbc.Col(width=2,style=nav_style,children=[
+                get_logo()
+            ]),
             
             # previous
-            dbc.Col(width=5,style=nav_style,children=[
+            dbc.Col(width=4,style=nav_style,children=[
                 dcc.Link(
                     id='previous-link',
                     href='',
@@ -70,12 +72,22 @@ app.layout = html.Div([
             ]), # end previous
             
             # slide count
-            dbc.Col(width=1,style=nav_style,children=[
-                html.H4(id='slide-count',style=dict(paddingTop='5px'))
+            dbc.Col(width=2,style=nav_style,children=[
+                dbc.DropdownMenu(
+                    id='slide-count',
+                    bs_size='lg',
+                    children = [
+                    dbc.DropdownMenuItem(
+                        s,
+                        href='/'+s,
+                        external_link=True
+                    )
+                    for s in slide_order
+                ])
             ]), # end slide count
             
             # next
-            dbc.Col(width=5,style=nav_style,children=[
+            dbc.Col(width=4,style=nav_style,children=[
                 dcc.Link(
                     id='next-link',
                     href='',
@@ -117,6 +129,8 @@ def change_slide(pathname):
 )
 def navigate(current_slide,pathname):
     '''
+    - listens to
+        - next/previous buttons
     - determines the current slide name
     - changes 'next' and 'previous' to the names of the slides on each side of the current slide
     - if this is the last or first slide, 'next' or 'previous' will just refresh the current slide
@@ -154,7 +168,7 @@ def set_slide_state(pathname):
 
 
 @app.callback(
-    Output('slide-count','children'),
+    Output('slide-count','label'),
     [Input('current-slide','children')]
 )
 def update_slide_count(current_slide):
