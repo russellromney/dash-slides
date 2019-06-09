@@ -13,7 +13,7 @@ from dash.dependencies import Output, Input, State
 content = html.Div(style=dict(textAlign='center'),children=[
     html.H1('Intro Slide Title'),
     html.Button('Click this!',id='intro-button',n_clicks=0),
-    html.H2(id='intro-div')
+    html.H2(id='intro-div'),
 ])
 
 
