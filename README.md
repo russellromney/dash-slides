@@ -2,8 +2,6 @@
 
 Make truly interactive slides in Python with Plotly Dash.
 
-![logo](https://raw.githubusercontent.com/russellromney/dash-slides/master/assets/logo.png)
-
 ---
 
 This is a Dash app with built in slide navigation, logo, web title, etc. An example is in `example/`.
