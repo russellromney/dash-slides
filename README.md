@@ -11,7 +11,7 @@ This is a Dash app with built in slide navigation, logo, web title, etc. An exam
 ## To use:
 
 1. Download, clone, or fork `dash-slides/`.
-1. Put slides (individual Dash apps) in `slides/` as `<slide_name>.py` files with callbacks and content.
+1. Put slides (individual Dash apps) in `slides/` as files with content and content, named like `<slide_name>.py`.
    - Slide names must be valid Python variable names e.g. `example.py` or `_intro5.py`.
    - Each slide's content is named `content = html.Div...` (similar to multipage Dash app where each page has a `layout = html.Div...`
    - Do not remove `from app import app` from any slide.
@@ -22,7 +22,31 @@ This is a Dash app with built in slide navigation, logo, web title, etc. An exam
 4. `pip install dash-bootstrap-components`
    - the navigation depends on it
 
-Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd like. 
+Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd like.
+
+How this would look:
+```
+# files structure
+/dash-slides
+   /assets
+   /slides
+      intro.py
+      body1.py
+      body2.py
+      conclusion.py
+   index.py
+   app.py
+   presentation.py
+   
+# /slides/presentation.py
+slide_order = [
+    'intro',
+    'body1',
+    'body2',
+    'conclusion'
+]
+...
+```
 
 ![example pic](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_pic.png)
 
