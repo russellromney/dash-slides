@@ -5,14 +5,13 @@
 # the order of the slides, using the names of the files
 # NOTE - slide filenames MUST BE VALID PYTHON VARIABLE NAMES
 slide_order = [
-slide_order = [
     'intro',
     'graph',
     'template',
     'content',
     'picture',
     'last'
-]]
+]
 
 # the text that appears in the tab
 presentation_title = 'Dash Slides'
