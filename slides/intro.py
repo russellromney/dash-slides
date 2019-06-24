@@ -14,6 +14,15 @@ content = html.Div(style=dict(textAlign='center'),children=[
     html.H1('Intro Slide Title'),
     html.Button('Click this!',id='intro-button',n_clicks=0),
     html.H2(id='intro-div'),
+
+    html.Br(),
+
+    html.Div(
+        html.Img(
+            src='https://cdn-images-1.medium.com/max/2600/1*tJGJzsEJJM21-3LT1XZbyw.jpeg',
+            style=dict(height='300px')
+        )
+    )
 ])
 
 

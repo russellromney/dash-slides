@@ -44,17 +44,14 @@ def get_logo():
     for i,x in enumerate(split_assets):
         if x=='logo':
             return html.Img(src='assets/'+assets[i],style=dict(height='50px'))
-    return html.A(
-        html.Img(height='40px',src='https://github.com/russellromney/dash-slides/assets/raw/logo.png'),
-        href='/'+slide_order[0]
-    )
+    return html.Img(height='40px',src='https://github.com/russellromney/dash-slides/assets/raw/logo.png')
 
 
 
 app.layout = html.Div([
     # URL control
     dcc.Location(id='url', refresh=False),
-    
+
     # navigation header
     dbc.Container(fluid=True,children=[
         html.Div(id='current-slide',style=dict(display='none',children='')),
@@ -64,7 +61,7 @@ app.layout = html.Div([
             dbc.Col(width=2,style=nav_style,children=[
                 get_logo()
             ]),
-            
+
             # previous
             dbc.Col(width=4,style=nav_style,children=[
                 dcc.Link(
@@ -73,7 +70,7 @@ app.layout = html.Div([
                     children=nav_button_div('<< Previous'),
                 ),
             ]), # end previous
-            
+
             # slide count
             dbc.Col(width=2,style=nav_style,children=[
                 dbc.DropdownMenu(
@@ -88,7 +85,7 @@ app.layout = html.Div([
                     for s in slide_order
                 ])
             ]), # end slide count
-            
+
             # next
             dbc.Col(width=4,style=nav_style,children=[
                 dcc.Link(
@@ -99,7 +96,7 @@ app.layout = html.Div([
             ]), # end next
         ]),
     ]),
-    
+
     # slide content
     html.Div(id='page-content')
 ])
@@ -151,7 +148,7 @@ def navigate(current_slide,pathname):
         next_slide = slide_order[current_order+1]
 
     return next_slide, previous_slide
-        
+
 
 @app.callback(
     Output('current-slide','children'),
@@ -190,5 +187,4 @@ if __name__=='__main__':
         port=8050,
         host = 'localhost',
         debug=True,
-    )
-    
+)
