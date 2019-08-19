@@ -21,6 +21,9 @@ pip install -r requirements.txt
 python index.py
 ```
 
+![example gif](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_gif.gif)
+
+
 **Making your own presentation**
 
 1. Download, clone, or fork `dash-slides/`.
@@ -60,8 +63,6 @@ slide_order = [
 ]
 ...
 ```
-
-![example pic](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_pic.png)
 
 ---
 
