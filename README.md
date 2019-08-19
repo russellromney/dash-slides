@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python index.py
 ```
 
-**Making your own presentation
+**Making your own presentation**
 
 1. Download, clone, or fork `dash-slides/`.
 1. Delete the example slides and add your own slides (individual Dash apps) in `slides/` as files with content and associated callbacks, with a filename like `<slide_name>.py`.
