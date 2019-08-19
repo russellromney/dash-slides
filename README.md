@@ -2,21 +2,33 @@
 
 Make truly interactive slides in Python with Dash. https://dash-slides-example.herokuapp.com/
 
----
-
 This is a Dash app with built in slide navigation, logo, web title, etc. Just run `python index.py` in a terminal to see it work!
 
 ## To use:
 
-1. Give `dash-slides` a star on GitHub. This step is very important.
+
+```shell
+git clone https://github.com/russellromney/dash-slides
+cd dash-slides
+
+virtualenv env
+source env/bin/activate
+
+pip install -r requirements.txt
+
+python index.py
+```
+
+**Making your own presentation
+
 1. Download, clone, or fork `dash-slides/`.
 1. Delete the example slides and add your own slides (individual Dash apps) in `slides/` as files with content and associated callbacks, with a filename like `<slide_name>.py`.
    - Slide names must be valid Python variable names e.g. `example.py` or `_intro5.py` but not `my great slide.py` or `5 people.py`.
-   - Each slide's content is named `content = html.Div...` (similar to multipage Dash app where each page has a `layout = html.Div...`
-   - Do not remove `from app import app` from any slide.
-3. In `presentation.py`:
+   - Each slide's layout is stored in a variable named `content`, e.g. `content = html.Div...` (similar to multipage Dash app where each page has a `layout = html.Div...`
+   - Every slide needs `from app import app` at the beginning
+3. Configure the presentation in  `presentation.py`:
    - List your slides' names in order (without the `.py`) in `slide_order`
-   - e.g. `['intro','template','last_slide','end']`
+   - e.g. `slide_order = ['intro','template','last_slide','end']`
 2. Store custom functions, utilities, objects, etc. in `custom_utilities/` or however else you'd like.
 4. `pip install dash dash-bootstrap-components`
    - the navigation depends on it
