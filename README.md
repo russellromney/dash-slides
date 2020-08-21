@@ -1,6 +1,6 @@
 # dash-slides
 
-Make Make easy interactive presentation slides in Python with Dash. 
+Make easy interactive presentation slides in Python with Dash. 
 
 Example app at https://dash-slides-example.herokuapp.com/
 
