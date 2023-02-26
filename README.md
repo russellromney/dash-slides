@@ -18,7 +18,7 @@ source env/bin/activate
 
 pip install -r requirements.txt
 
-python index.py
+python app.py
 ```
 
 ![example gif](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_gif.gif)
@@ -38,7 +38,9 @@ python index.py
 4. `pip install dash dash-bootstrap-components`
    - the navigation depends on it
 
-Then run it like a normal Dash app with `python index.py` or using Gunicorn or whatever else you'd normally use with Dash or Flask.
+Then run it like a normal Dash app with `python app.py` or using Gunicorn or whatever else you'd normally use with Dash or Flask.
+
+For the curious, there's a Dockerfile included to run this with `gunicorn` workers.
 
 How this would look:
 ```
@@ -79,6 +81,6 @@ slide_order = [
 
 ---
 
-Made with :heart: by Russell Romney in Madison, WI.
+Made with :heart: by Russell Romney in Madison, WI and NYC.
 
-> Shoutout to dash_bootstrap_components, which is used to make navigation pretty
+> Shoutout to Tom Begley's excellent `dash-bootstrap-components` package, used here to make prettify navigation.

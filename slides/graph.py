@@ -1,6 +1,6 @@
 # necessary imports - do not change
 from dash import html, dcc, Input, Output, State
-from app import app
+from server import app
 
 # custom imports
 import plotly.graph_objs as go

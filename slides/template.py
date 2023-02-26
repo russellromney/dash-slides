@@ -4,7 +4,7 @@
 
 # necessary imports - do not change
 from dash import html, dcc, Input, Output, State
-from app import app
+from server import app
 
 # custom imports - delete these if you don't need them
 from custom_utilities.custom_functions import my_function
