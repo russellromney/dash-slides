@@ -3,24 +3,24 @@
 ###
 
 # necessary imports - do not change
+from dash import html, dcc, Input, Output, State
 from app import app
 
 # custom imports - delete these if you don't need them
-import dash_html_components as html
-import dash_core_components as dcc
-from dash.dependencies import Output, Input, State
 from custom_utilities.custom_functions import my_function
 
-content = html.Div(style=dict(textAlign='center'),children=[
-    html.H1('Template Slide Title'),
-    html.Button('Click this!',id='template-button',n_clicks=0),
-    html.H2(id='template-div')
-])
+content = html.Div(
+    style=dict(textAlign="center"),
+    children=[
+        html.H1("Template Slide Title"),
+        html.Button("Click this!", id="template-button", n_clicks=0),
+        html.H2(id="template-div"),
+    ],
+)
 
 
 @app.callback(
-    Output('template-div','children'),
-    [Input('template-button','n_clicks')]
+    Output("template-div", "children"), [Input("template-button", "n_clicks")]
 )
 def create_template_graph(n):
-    return 'Button has been clicked {} times.'.format(n)
+    return "Button has been clicked {} times.".format(n)
