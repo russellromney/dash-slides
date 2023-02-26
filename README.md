@@ -4,7 +4,7 @@ Make easy interactive presentation slides in Python with Dash.
 
 Example app at https://dash-slides-example.herokuapp.com/
 
-This is a Dash app with built in slide navigation, logo, web title, etc. Just run `python index.py` in a terminal to see it work!
+This is a Dash app with built in slide navigation, logo, web title, etc. Just run `python3 app.py` in a terminal to see it work!
 
 ## To use:
 
