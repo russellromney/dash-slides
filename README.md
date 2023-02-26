@@ -8,17 +8,26 @@ This is a Dash app with built in slide navigation, logo, web title, etc. Just ru
 
 ## To use:
 
-
 ```shell
 git clone https://github.com/russellromney/dash-slides
 cd dash-slides
+```
 
+Using pip virtualenv:
+
+```shell
 virtualenv env
 source env/bin/activate
-
 pip install -r requirements.txt
+python3 app.py
+```
 
-python app.py
+Or, my preferred way, using `poetry`:
+
+```shell
+poetry shell
+poetry install
+python3 app.py
 ```
 
 ![example gif](https://raw.githubusercontent.com/russellromney/dash-slides/master/example/assets/example_gif.gif)
@@ -79,6 +88,28 @@ slide_order = [
 **Custom navigation text:** Replace `prev_text` and `next_text` values with new words to have any navigation text you want.
 
 
+
+---
+
+## Free deployment on [fly.io](https://fly.io)
+
+You can deploy to free to https://fly.io with automatic HTTPS and a URL!
+
+I've included a `Dockerfile` for you - just install flyctl (https://fly.io/docs/hands-on/install-flyctl/) and create a free account, then do:
+
+```shell
+fly launch
+```
+
+It will prompt you for an app name and a region and create a `fly.toml` file; your app will then be available at https://app-name.fly.dev.
+
+If you don't deploy immediately, or to redeploy after changes do:
+
+```shell
+fly deploy
+```
+
+again.
 ---
 
 Made with :heart: by Russell Romney in Madison, WI and NYC.
